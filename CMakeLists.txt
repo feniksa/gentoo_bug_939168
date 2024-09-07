@@ -9,11 +9,7 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake")
 option(ASAN "Build with sanitizers" TRUE)
 
 include(cmake/CompileOptions.cmake)
-
 find_package(Protobuf CONFIG REQUIRED)
-
-# dissable boost asio outdated stuff
-add_compile_options($<$<COMPILE_LANG_AND_ID:CXX,GNU>:-DBOOST_ASIO_NO_DEPRECATED>)
 
 # ---------------------------------------------------------
 # protobuf part
