@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package serialize;
+
+message Data 
+{
+	map<string, string> payload = 1;
+	string link = 2;
+}
+
